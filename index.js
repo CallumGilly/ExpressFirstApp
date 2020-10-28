@@ -15,12 +15,12 @@ app.set('port', process.env.PORT || 3000);
 
 //Root branch
 router.get('/', (req,res) => {
-  res.send("Hello");
+  res.sendFile(__dirname + '/testpage.html');
 });
 
 //Basic test to see if the server is working
 router.get('/Test', (req,res) => {
-  res.send('Web app is working');
+  res.send('<h1>Web app is working</h1>');
 });
 
 //Set the app to use router then listen before stating that we are listning
